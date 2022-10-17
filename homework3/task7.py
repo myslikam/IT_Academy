@@ -12,7 +12,7 @@ for i in range(n_country):
     for i in range(1, len(str_input)):
         my_dict[str_input[i]] = str_input[0]
 
-n_city = int(input("Веведите количетво городов: "))
+n_city = int(input("Веведите количество городов: "))
 
 # Цикл для вывода значений по ключу
 for i in range(n_city):
