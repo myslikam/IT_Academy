@@ -18,19 +18,17 @@ for i in range(n_sch):
 
 
 # В первой строке выведите количество языков, которые знают все школьники
-n_len = len(set.intersection(*my_lst))
-print(f"Количество языков, которые знают все школьники: {n_len}")
+n_len_list = set.intersection(*my_lst)
+print(f"Количество языков, которые знают все школьники: {len(n_len_list)}")
 
 # Начиная со второй строки - список таких языков
-n_len_list = set.intersection(*my_lst)
 print(f"Список языков которые знают все школьники: \n {n_len_list}")
 
 # Затем - количество языков, которые знает хотя бы один школьник
-n_len_one = len(set.union(*my_lst))
-print(f"Количество языков, которые знает хотя бы один школьник: {n_len_one}")
+n_len_one_list = set.union(*my_lst)
+print(f"Количество языков, которые знает хотя бы один школьник: {len(n_len_one_list)}")
 
 # на следующих строках - список таких языков
-n_len_one_list = set.union(*my_lst)
 print(f"Список языков которые знает хотя бы один школьник: \n {n_len_one_list}")
 
 
