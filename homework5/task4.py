@@ -1,16 +1,38 @@
 # a.	Откройте и прочитайте файл(если его нет необходимо вывести ошибку).
 
-rating = open("data_hw5/ratings.list", 'r')
-rating.close()
+# rating = open("data_hw5/ratings.list", 'r')
+# rating.close()
+
 
 
 # b.	Найдите ТОП250 фильмов и извлеките заголовки.
 
-rating = open("data_hw5/ratings.list", 'r')
-c = rating.readlines()[29:30]
-# c.split()
-print(c)
-rating.close()
+with open("data_hw5/ratings.list", 'r') as rating:
+
+    rating_list = rating.readlines()
+    my_list = rating_list[28:278]
+
+    for i in my_list:
+        x = i.strip('\n')
+        lst = x.split()
+        print(" ".join(lst[3:-1]))
+
+
+
+
+
+
+
+
+
+
+
+
+# rating = open("data_hw5/ratings.list", 'r')
+# c = rating.readlines()[29:30]
+# # c.split()
+# print(c)
+# rating.close()
 
 
 # pip install IMDbPY

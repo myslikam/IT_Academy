@@ -3,6 +3,18 @@
 # по возрастанию, которая этот список “сворачивает”
 
 
+# Не готова
+
+
+
+
+
+
+
+
+
+
+
 # nums =[0, 1, 2, 3, 4, 7, 8, 10]
 # ranges = sum((list(t) for t in zip(nums, nums[1:]) if t[0]+1 != t[1]), [])
 # iranges = iter(nums[0:1] + ranges + nums[-1:])
