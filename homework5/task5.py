@@ -3,13 +3,12 @@
 
 def degree_n():
     a = int(input("Введите число: "))
-    if a < 3:
-        print(1)
-    elif a % 2 == 0 and (a & (a - 1) != 0):
-        print(2 ** (a.bit_length()-1))
-    elif a % 2 != 0 and (a & (a - 1) != 0):
-        print(2 ** (a.bit_length()))
+    a_low = 2 ** (a.bit_length()-1)
+    a_up = 2 ** (a.bit_length())
+    if a - a_low < a_up - a:
+        print(a_low)
     else:
-        print(a.bit_length()-1)
-
+        print(a_up)
 degree_n()
+
+
