@@ -19,6 +19,7 @@ my_func(33)
 my_func(1658)
 
 
+
 # Старое решение
 # def my_dec(fun):
 #     n = 0

@@ -9,6 +9,7 @@ def degree_n():
         print(a_low)
     else:
         print(a_up)
+
 degree_n()
 
 
