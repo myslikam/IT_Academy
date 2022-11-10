@@ -44,7 +44,9 @@ def func4():
 
 
 def runner(*args):
-    if len(args) == 0:
+
+    # if len(args) == 0:   #- старое решение
+    if not args: # ИСПРАВЛЕНИЕ
         func1()
         func2()
         func3()
