@@ -95,23 +95,24 @@ def input_temp(a):
             return a
 
 
-# class KpdError(ValueError):
-#     pass
-#
-# def input_kpd(a):
-#     # проверка ввода данных КПД котла
-#     while True:
-#         try:
-#             a = float(a.replace(',', '.'))
-#         except ValueError:
-#             print("-== Неверный ввод данных ==-")
-#             a = input("Повторите ввод данных:  ")
-#             continue
-#         else:
-#             return a
-#     try:
-#         a > 100
+class KpdError(ValueError):
+    pass
 
+def input_kpd(a):
+    # проверка ввода данных КПД котла
+    while True:
+        try:
+            a = float(a.replace(',', '.'))
+        except ValueError:
+            print("-== Неверный ввод данных ==-")
+            a = input("Повторите ввод данных:  ")
+            continue
+        else:
+            if float(a) < 100:
+                return a
+            else:
+                print("-== КПД не может быть больше 100% ==-")
+                a = input("Повторите ввод данных:  ")
 
 
 def data_entry():
@@ -126,7 +127,7 @@ def data_entry():
     data_fuel.append(input_temp(input("Введите расчетную температуру наружного воздуха, С: ")))
     data_fuel.append(input_temp(input("Введите продолжительность отопительного периода, сут.: ")))
     data_fuel.append(input_temp(input("Введите среднюю температуру наружного воздуха за отопительный период, С: ")))
-    data_fuel.append(input_temp(input("Введите КПД котла, %: ")))
+    data_fuel.append(input_kpd(input("Введите КПД котла, %: ")))
 
     calculation_fuel(*data_fuel)
 
